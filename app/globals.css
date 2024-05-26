@@ -2,32 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+.light{
+    background-color: #eeeeee;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.dark{
+   background-color: #2e323a;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/*
+header{
+    background: rgb(32,35,44);
+    background: linear-gradient(319deg, rgba(32,35,44,1) 98%, rgba(45,58,67,1) 100%);
+}*/
+
+header{
+    background: hsla(205, 20%, 22%, 1);
+    background: linear-gradient(90deg, hsla(205, 20%, 22%, 1) 0%, hsla(225, 16%, 15%, 1) 97%);
+    background: -moz-linear-gradient(90deg, hsla(205, 20%, 22%, 1) 0%, hsla(225, 16%, 15%, 1) 97%);
+    background: -webkit-linear-gradient(90deg, hsla(205, 20%, 22%, 1) 0%, hsla(225, 16%, 15%, 1) 97%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#2D3A43", endColorstr="#20232C", GradientType=1 );
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+nav a{
+    color: #fefefe;
+    font-size: 12px;
 }
+
+.h1{
+    @apply text-5xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold;
+}
+
+.paragraf{
+    @apply text-lg mb-8 font-light;
+}
+
+.projekt-btn{
+    @apply p-3.5 text-sm rounded-md bg-slate-600 text-white font-light;
+}
+
+.kontakt-btn{
+    @apply p-3.5 text-sm rounded-md bg-gray-300 text-slate-700 font-medium italic;
+}
+
+.badge{
+    @apply z-10 w-[220px] h-[68px] bg-white dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-md flex items-center gap-x-4;
+}
+
+.about-imgs{
+    @apply h-[50px] xl:h-[80px];
+}
+
+.kort{
+    border: 1px solid;
+}
+
+
+.custom-button-style{
+    border-radius: 0.375rem;
+    background-color: red !important;
+}
+
